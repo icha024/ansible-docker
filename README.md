@@ -7,7 +7,8 @@ docker run --rm -ti ansible-docker
 
 ## Check Docker IPs
 docker network inspect bridge
+docker network inspect bridge -f '{{range .Containers}}{{.IPv4Address}} {{end}}' 
 
 ## Ping server ('test' is the hosts profile)
-ansible test -m ping --private-key=ansible-key -u root
+ansible all -m ping --private-key=ansible-key -i ./hosts
 
