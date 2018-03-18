@@ -1,0 +1,15 @@
+---
+
+- hosts: etcd
+  tasks:
+  - name: Install etcd  
+    apt:
+      name: etcd
+      update_cache: yes
+
+  - name: Ensure etcd is running
+    shell: echo "Can't control from Docker"
+    # systemd:
+    #   name: etcd
+    #   enabled: True
+    #   state: started

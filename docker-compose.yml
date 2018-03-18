@@ -4,11 +4,14 @@ services:
     image: docker-ansible
     ports:
       - "1022:3333"
+    privileged: true
   box2:
     image: docker-ansible
     ports:
       - "2022:3333"
+    privileged: true
   box3:
     image: docker-ansible
     ports:
       - "3022:3333"
+    privileged: true
