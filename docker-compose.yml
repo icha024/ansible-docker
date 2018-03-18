@@ -1,0 +1,14 @@
+version: '3'
+services:
+  box1:
+    image: docker-ansible
+    ports:
+      - "1022:3333"
+  box2:
+    image: docker-ansible
+    ports:
+      - "2022:3333"
+  box3:
+    image: docker-ansible
+    ports:
+      - "3022:3333"

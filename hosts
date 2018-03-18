@@ -1,7 +1,7 @@
 [testers]
-172.17.0.2
-172.17.0.3
-172.17.0.4
+box1 ansible_port=1022
+box2 ansible_port=2022
+box3 ansible_port=3022
 
 [testers:vars]
 ansible_user=root
